@@ -1,0 +1,19 @@
+{
+  "name": "wpifinbot",
+  "version": "0.0.0",
+  "description": "A Financial Bot for WPI SGA",
+  "main": "src",
+  "dependencies": {
+    "@slack/rtm-api": "^5.0.5",
+    "@slack/web-api": "^5.11.0",
+    "esm": "^3.2.25",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "author": "Kevin Bimonte",
+  "license": "ISC"
+}
