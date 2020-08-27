@@ -2,9 +2,9 @@
 This bot hooks into WPI's Student Government's Financial Database to provide realtime statistics inside of their internal Slack. 
 
 ## Dependencies
-[Node Version Manager](https://github.com/nvm-sh/nvm) - Used to install and manage node instances.
-[Yarn](https://classic.yarnpkg.com/en/docs/install#alternatives-stable) - Used inplace of NPM for getting node packages.
-Creation of a SlackBot in your workspace ([See Notes for a video link](#notes))
+-  [Node Version Manager](https://github.com/nvm-sh/nvm) - Used to install and manage node instances.
+-  [Yarn](https://classic.yarnpkg.com/en/docs/install#alternatives-stable) - Used inplace of NPM for getting node packages.
+-  Creation of a SlackBot in your workspace ([See Notes for a video link](#notes))
 
 ## Installation
 1. Clone this git repository to an Ubuntu Machine
