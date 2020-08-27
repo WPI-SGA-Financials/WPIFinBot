@@ -23,7 +23,7 @@ This bot hooks into WPI's Student Government's Financial Database to provide rea
 ## Notes
 -  To properly install nvm and yarn, I recommend watching this [video from Techno Tim](https://www.youtube.com/watch?v=kL8iGErULiw)
 -  This slack bot only works when it is running, meaning a dedicated machine is needed.
--  In order to properly set up a slack bot and gain a Slack OATH Token, follow along with this [video from Techno Time](https://www.youtube.com/watch?v=AajBk59nOgw&t=255s)
+-  In order to properly set up a slack bot and gain a Slack OATH Token, follow along with this [video from Techno Tim](https://www.youtube.com/watch?v=AajBk59nOgw&t=255s)
 -  The bot must be added to the channel you want results in.
 
 ## Commands
