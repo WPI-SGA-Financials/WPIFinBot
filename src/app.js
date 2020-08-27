@@ -5,11 +5,8 @@ import { Database } from './database';
 const packageJSON = require('../package.json')
 const rtm = new RTMClient(SLACK_OATH_TOKEN);
 
-
 var constants = require('./constants')
 var sqlCommands = require('./sqlcommands')
-
-var database = new Database()
 
 rtm.start()
     .catch(console.error);
@@ -22,6 +19,7 @@ rtm.on('ready', async () => {
 rtm.on('slack_event', async (eventType, event) => {
     if(event && event.type === `message`) {
         if (event.text === `!numbers`) {
+            var database = new Database()
             sqlCommands.printAllNumbers(database, event.user, event.channel)
         } 
     }
