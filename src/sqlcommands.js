@@ -4,6 +4,8 @@ export function printAllNumbers(database, userID, channelID) {
     let bAllocation;
     let frAllocation;
     let mtAllocation;
+    let activeClubs;
+    let inactiveClubs;
 
     var message = `<@${userID}>, here are the numbers for the current Fiscal Year (FY ${getCurrentFiscalYear()}):`
 
@@ -19,12 +21,19 @@ export function printAllNumbers(database, userID, channelID) {
         })
         .then(rows => {
             mtAllocation = rows[0][0].Total_MT;
+            return database.query(`call dashMembership();`)
+        })
+        .then(rows => {
+            activeClubs = rows[0][0].Active
+            inactiveClubs = rows[0][0].Inactive
         })
         .then( () => {
             message = message
                 + `\n\tTotal Budget Allocation: ` + bAllocation
                 + `\n\tTotal Funding Request Allocation: ` + frAllocation
                 + `\n\tTotal Mandatory Transfer Allocation: ` + mtAllocation
+                + `\n\tActive Clubs: ` + activeClubs
+                + `\n\tInactive Clubs: ` + inactiveClubs
 
                 sendMessage(channelID, message);
         }) 
