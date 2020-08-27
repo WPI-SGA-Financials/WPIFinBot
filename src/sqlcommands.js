@@ -27,6 +27,9 @@ export function printAllNumbers(database, userID, channelID) {
                 + `\n\tTotal Mandatory Transfer Allocation: ` + mtAllocation
 
                 sendMessage(channelID, message);
+        }) 
+        .then( () => {
+            database.close()
         })
 }
 

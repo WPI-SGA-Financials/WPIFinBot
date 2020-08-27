@@ -23,8 +23,6 @@ rtm.on('slack_event', async (eventType, event) => {
     if(event && event.type === `message`) {
         if (event.text === `!numbers`) {
             sqlCommands.printAllNumbers(database, event.user, event.channel)
-        } else if (event.text === `!stop`) {
-            database.close()
-        }
+        } 
     }
 });
