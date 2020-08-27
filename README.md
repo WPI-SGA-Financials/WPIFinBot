@@ -31,7 +31,7 @@ This bot hooks into WPI's Student Government's Financial Database to provide rea
 
 #### Planned Commands
 -  `!help` - Gives information on current commands and bot version number
--  `!classes` - Returns the Current Class Structure, Number of CLubs in that Class, and a short description
+-  `!classes` - Returns the Current Class Structure, Number of Clubs in that Class, and a short description
 -  `!recents` - Returns the requests from the past week. (If none, return `No requests in the past week`)
 
 ## Authorship
