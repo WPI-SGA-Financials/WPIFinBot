@@ -1,6 +1,6 @@
 {
   "name": "wpifinbot",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A Financial Bot for WPI SGA",
   "main": "src",
   "dependencies": {
