@@ -78,6 +78,9 @@ export function getRecentRequests(database, userID, channelID) {
             } else {
                 sendMessage(channelID, `No requests in the past seven days!`);
             }
+    })
+    .then( () => {
+        database.close();
     });
 
 }
