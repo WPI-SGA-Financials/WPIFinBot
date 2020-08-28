@@ -1,5 +1,6 @@
 import { sendMessage } from './constants';
 
+// Get the Total Allocations for the Current Year and current active status for clubs
 export function printAllNumbers(database, userID, channelID) {
     let bAllocation;
     let frAllocation;
@@ -9,7 +10,6 @@ export function printAllNumbers(database, userID, channelID) {
 
     var message = `<@${userID}>, here are the numbers for the current Fiscal Year (FY ${getCurrentFiscalYear()}):`
 
-    // Get the Total Allocations for the Current Year
     database.query(`call dashBudgetAlloc(${getCurrentFiscalYear()});`)
         .then(rows => {
             bAllocation = rows[0][0].Total_Budget;
@@ -42,6 +42,50 @@ export function printAllNumbers(database, userID, channelID) {
         })
 }
 
+// Get the requests from the past week (7 days)
+export function getRecentRequests(database, userID, channelID) {
+    var message = `<@${userID}>, here are the requests from the past seven days:`
+        + "\n```Name of Club,Dot Number,Hearing Date,Description,Requested,Decision,Approved";
+
+    let clubName;
+    let dotNum;
+    let hearingDate;
+    let descrip;
+    let requested;
+    let decision;
+    let approved;
+
+    var sqlQuery = "Select `Name of Club` as clubName, `Dot Number` as dotNumber, DATE_FORMAT(`Hearing Date`, '%m/%d/%Y') as hearingDate,"
+        + " `Description` as description, `Requested` as requested, `Decision` as decision, `Approved` as approved"
+        + " From `All Requests`"
+        + " Where `Hearing Date` >= (DATE(NOW()) - INTERVAL 7 DAY)"
+
+    database.query(sqlQuery)
+        .then(rows => {
+            if(rows.length) {
+                for(var i = 0; i < rows.length; i++) {
+                    clubName = rows[i].clubName
+                    dotNum = rows[i].dotNumber
+                    hearingDate = rows[i].hearingDate
+                    descrip = rows[i].description
+                    requested = rows[i].requested
+                    decision = rows[i].decision
+                    approved = rows[i].approved
+
+                    message = message + `\n` + clubName + "," + dotNum + "," + hearingDate + "," + descrip + "," + requested + "," + decision + "," + approved
+                }
+                sendMessage(channelID, message + "```");
+            } else {
+                sendMessage(channelID, `No requests in the past seven days!`);
+            }
+    })
+    .then( () => {
+        database.close();
+    });
+
+}
+
+// Get the current Fiscal Year
 function getCurrentFiscalYear() {
     const now = new Date();
 

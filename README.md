@@ -18,7 +18,7 @@ This bot hooks into WPI's Student Government's Financial Database to provide rea
    ``` 
 4. Edit `constants.js` and designate a channel for spam from the bot (Default is `#bot-spam`)
 5. Go back to the main folder (`wpifinbot`) and run `yarn start`.
-6. If everything is properly set up, you should see a console command saying `bot started` and `Bot version 0.0.0 online` in the designated bot spam channel.
+6. If everything is properly set up, you should see a console command saying `bot started` and `Bot version 0.0.1 online` in the designated bot spam channel.
 
 ## Notes
 -  To properly install nvm and yarn, I recommend watching this [video from Techno Tim](https://www.youtube.com/watch?v=kL8iGErULiw)
@@ -28,11 +28,11 @@ This bot hooks into WPI's Student Government's Financial Database to provide rea
 
 ## Commands
 -  `!numbers` - Gives the current Budget, FR, and Mandatory Transfer Allocations
+-  `!recents` - Returns the requests from the past week. (If none, return `No requests in the past seven days!`)
 
 #### Planned Commands
 -  `!help` - Gives information on current commands and bot version number
 -  `!classes` - Returns the Current Class Structure, Number of Clubs in that Class, and a short description
--  `!recents` - Returns the requests from the past week. (If none, return `No requests in the past week`)
 
 ## Authorship
 This bot was created by [Kevin Bimonte](http://www.github.com/kcbimonte).

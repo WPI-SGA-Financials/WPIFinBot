@@ -21,6 +21,9 @@ rtm.on('slack_event', async (eventType, event) => {
         if (event.text === `!numbers`) {
             var database = new Database()
             sqlCommands.printAllNumbers(database, event.user, event.channel)
-        } 
+        } else if (event.text === `!recents`) {
+            var database = new Database()
+            sqlCommands.getRecentRequests(database, event.user, event.channel)
+        }
     }
 });
