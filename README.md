@@ -27,7 +27,7 @@ This bot hooks into WPI's Student Government's Financial Database to provide rea
 -  The bot must be added to the channel you want results in.
 
 ## Commands
--  `!numbers` - Gives the current Budget, FR, and Mandatory Transfer Allocations
+-  `!numbers` - Gives the current Budget, FR, Mandatory Transfer Allocations, and Number of Active/Inactive Clubs
 -  `!recents` - Returns the requests from the past week. (If none, return `No requests in the past seven days!`)
 
 #### Planned Commands
