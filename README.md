@@ -28,11 +28,11 @@ This bot hooks into WPI's Student Government's Financial Database to provide rea
 
 ## Commands
 -  `!numbers` - Gives the current Budget, FR, and Mandatory Transfer Allocations
+-  `!recents` - Returns the requests from the past week. (If none, return `No requests in the past seven days!`)
 
 #### Planned Commands
 -  `!help` - Gives information on current commands and bot version number
 -  `!classes` - Returns the Current Class Structure, Number of Clubs in that Class, and a short description
--  `!recents` - Returns the requests from the past week. (If none, return `No requests in the past week`)
 
 ## Authorship
 This bot was created by [Kevin Bimonte](http://www.github.com/kcbimonte).
