@@ -1,15 +1,13 @@
 import { createConnection } from 'mysql';
-import {HOST, USER, PASSWORD} from './secrets'
-import { DATABASE } from "./constants";
 
 export class Database {
     constructor() {
         this.connection = createConnection({
-            host : HOST,
+            host : process.env.DB_HOST,
             port : 3306,
-            user : USER,
-            password : PASSWORD,
-            database : DATABASE
+            user : process.env.DB_USER,
+            password : process.env.DB_PASS,
+            database : process.env.DB_DATABASE
         });
     }
     query( sql, args ) {

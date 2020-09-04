@@ -2,7 +2,7 @@
   "name": "wpifinbot",
   "version": "0.0.1",
   "description": "A Financial Bot for WPI SGA",
-  "main": "src",
+  "main": "/src/app",
   "dependencies": {
     "@slack/rtm-api": "^5.0.5",
     "@slack/web-api": "^5.11.0",
