@@ -21,10 +21,10 @@ There are two ways to install this slack bot: With Yarn, and with Docker.
    ``` 
 4. Edit `constants.js` and designate a channel for spam from the bot (Default is `#bot-spam`)
 5. Go back to the main folder (`wpifinbot`) and run `yarn start`.
-6. If everything is properly set up, you should see a console command saying `bot started` and `Bot version 0.0.1 online` in the designated bot spam channel.
+6. If everything is properly set up, you should see a console command saying `bot started` and `Bot version 0.0.2 online` in the designated bot spam channel.
 ### Docker
 1. Clone this git repository to a machine runnning docker
-2. cd into the cloned folder and run `docker build --tag wpifinbot:0.0.1`
+2. cd into the cloned folder and run `docker build --tag wpifinbot:0.0.2`
 3. run the following command with the taking note of the required fields
 ```
 docker run --name wpifinbot \
@@ -34,9 +34,9 @@ docker run --name wpifinbot \
  -e DB_PASS=[dbpass] \
  -e DB_USER=[dbuser] \
  -e SLACK_OATH_TOKEN=[token] \
- wpifinbot:0.0.1
+ wpifinbot:0.0.2
 ```
-4. If everything is properly set up, you should see a console command saying `bot started` and `Bot version 0.0.1 online` in the designated bot spam channel.
+4. If everything is properly set up, you should see a console command saying `bot started` and `Bot version 0.0.2 online` in the designated bot spam channel.
 
 ## Notes
 -  To properly install nvm and yarn, I recommend watching this [video from Techno Tim](https://www.youtube.com/watch?v=kL8iGErULiw)
