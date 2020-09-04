@@ -9,7 +9,7 @@ export function printAllNumbers(database, userID, channelID) {
     let inactiveClubs;
 
     var message = `<@${userID}>, here are the numbers for the current Fiscal Year (FY ${getCurrentFiscalYear()}):`
-
+    
     database.query(`call dashBudgetAlloc(${getCurrentFiscalYear()});`)
         .then(rows => {
             bAllocation = rows[0][0].Total_Budget;
